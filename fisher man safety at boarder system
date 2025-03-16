@@ -1,0 +1,14 @@
+#include <avr/io.h>
+#include <util/delay.h>
+#include <string.h>
+#include <stdlib.h>
+#include "gps.h"   // GPS Library for fetching latitude & longitude
+#include "lcd.h"   // LCD Library for displaying warnings
+#include "uart.h"  // UART for serial communication
+
+#define BORDER_LAT  18.1234  // Set predefined border latitude
+#define BORDER_LON  83.5678  // Set predefined border longitude
+#define THRESHOLD   0.05     // Allowable deviation in degrees
+
+#define BUZZER_PIN  PB0
+#define LED_PIN     PB1
